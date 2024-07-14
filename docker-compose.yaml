@@ -25,6 +25,20 @@ services:
     environment:
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='
+      - 'GLOBAL_LOG_LEVEL=INFO'
+      - 'USER_AGENT="Alteryx RAG Example v0.001"'
+      - 'OPENAI_API_BASE_URL=https://api.openai.com/v1'
+      - 'OPENAI_API_BASE_URLS=https://api.openai.com/v1;https://api.mistral.ai/v1'
+      - 'OPENAI_API_KEY=sk-proj-Nq6qSnqjXTGgJDYH8Te2T3BlbkFJ0l0G5Jqg7UGpPzLUdaMN'
+      - 'OPENAI_API_KEYS=sk-proj-Nq6qSnqjXTGgJDYH8Te2T3BlbkFJ0l0G5Jqg7UGpPzLUdaMN;MiV55gysLncdgt0CwYwcu1KEoNczjo2l'
+      - 'ANONYMIZED_TELEMETRY=false'
+      - 'ADMIN_EMAIL=jupiter.bakakeu@gmail.com'
+      - 'ENABLE_RAG_WEB_SEARCH=true'
+      - 'RAG_WEB_SEARCH_ENGINE=serper'
+      - 'SERPER_API_KEY=3ea3e60e0b771eb1f11e4b57af0b7d02293de0e7'
+      - 'AUDIO_STT_ENGINE=openai'
+      - 'ENABLE_IMAGE_GENERATION=true'
+      - 'WEBUI_NAME=Alteryx RAG Example'
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
